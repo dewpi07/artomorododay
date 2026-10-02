@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ARTOMORO — dari kopi turun ke hati</title>
+<meta name="description" content="ARTOMORO, kedai kopi bernuansa vintage modern. Lihat menu kopi dan non kopi, cerita kami, dan cara menghubungi kami.">
+<meta name="theme-color" content="#2B1B15">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{roast:'#2B1B15',bean:'#3D2820',brass:'#C8A25E',sage:'#7D9484',ivory:'#F2E8D8'},fontFamily:{display:['Fraunces','Georgia','serif'],body:['Manrope','system-ui','sans-serif']}}}}
+</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-roast text-ivory font-body antialiased">
+<div class="blob b1" aria-hidden="true"></div><div class="blob b2" aria-hidden="true"></div><div class="blob b3" aria-hidden="true"></div>
+
+<header class="fixed top-3 inset-x-3 z-40 mx-auto max-w-5xl">
+  <nav class="glass rounded-full px-5 py-3 flex items-center justify-between" aria-label="Navigasi utama">
+    <a href="#beranda" class="font-display text-xl tracking-wide">ARTOMORO</a>
+    <ul class="hidden md:flex gap-7 text-sm">
+      <li><a class="nav-link" href="#tentang">Tentang</a></li>
+      <li><a class="nav-link" href="#menu">Menu</a></li>
+      <li><a class="nav-link" href="#kontak">Kontak</a></li>
+    </ul>
+    <button id="navBtn" class="burger md:hidden" aria-label="Buka menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span></button>
+  </nav>
+  <div id="drawer" class="drawer md:hidden">
+    <div class="glass rounded-3xl">
+      <ul class="p-6 grid gap-4 text-xl font-display">
+        <li style="--i:0"><a href="#tentang">Tentang</a></li><li style="--i:1"><a href="#menu">Menu</a></li><li style="--i:2"><a href="#kontak">Kontak</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="beranda" class="min-h-screen px-5 pt-28 pb-16 max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+  <div>
+    <p class="text-sage text-sm mb-4 hero-in" style="--d:.1s">Kedai kopi · sejak hari pertama kami menyeduh</p>
+    <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.05] hero-in" style="--d:.25s">dari kopi<br><em class="text-brass">turun ke hati</em></h1>
+    <p class="mt-6 max-w-md text-ivory/75 leading-relaxed hero-in" style="--d:.45s">ARTOMORO menyeduh biji pilihan dengan rasa yang akrab dan suasana klasik yang tetap terasa segar. Mampir, duduk, dan nikmati pelan-pelan.</p>
+    <div class="mt-8 flex flex-wrap gap-3 hero-in" style="--d:.6s">
+      <a href="#menu" class="btn-brass">Lihat menu</a>
+      <a href="#kontak" class="btn-glass">Kunjungi kami</a>
+    </div>
+  </div>
+  <div class="hero-in flex justify-center" style="--d:.4s">
+    <div class="glass tilt rounded-[2.5rem] p-10 w-full max-w-sm aspect-[4/5] flex items-center justify-center relative">
+      <svg viewBox="0 0 200 240" class="w-full h-full" fill="none" stroke="#C8A25E" stroke-width="3" stroke-linecap="round" role="img" aria-label="Ilustrasi cangkir kopi mengepul">
+        <path class="steam s1" d="M80 80c-14-16 14-26 0-44"/><path class="steam s2" d="M104 84c-14-18 14-30 0-50"/><path class="steam s3" d="M128 80c-14-16 14-26 0-44"/>
+        <path d="M46 110h108v38c0 30-24 52-54 52s-54-22-54-52z" fill="rgba(200,162,94,.12)"/>
+        <path d="M154 122h12a18 18 0 0 1 0 36h-18"/>
+        <ellipse cx="100" cy="110" rx="54" ry="9"/><ellipse cx="100" cy="222" rx="78" ry="9" opacity=".6"/>
+      </svg>
+      <span class="absolute bottom-6 font-display italic text-ivory/70 text-sm">Kopi Susu Artomoro</span>
+    </div>
+  </div>
+</section>
+
+<section id="tentang" class="px-5 py-20 max-w-6xl mx-auto">
+  <div class="glass tilt rounded-[2rem] p-8 md:p-14 grid md:grid-cols-5 gap-10 reveal">
+    <div class="md:col-span-3">
+      <h2 class="font-display text-3xl md:text-4xl">Cerita di balik cangkir</h2>
+      <p class="mt-5 text-ivory/75 leading-relaxed max-w-prose">ARTOMORO lahir dari keyakinan sederhana: kopi yang baik dibuat dengan perhatian, lalu dinikmati bersama orang yang tepat. Kami memadukan interior bernuansa klasik dengan racikan yang dekat dengan selera anak muda hari ini. <span class="text-brass">[Ganti dengan cerita asli ARTOMORO]</span></p>
+    </div>
+    <ul class="md:col-span-2 grid gap-5">
+      <li><h3 class="font-display text-lg text-brass">Biji dipilih sendiri</h3><p class="text-sm text-ivory/70">Disangrai dan diseduh sesuai karakter masing-masing biji.</p></li>
+      <li><h3 class="font-display text-lg text-brass">Suasana hangat</h3><p class="text-sm text-ivory/70">Tempat untuk bekerja, mengobrol, atau sekadar diam.</p></li>
+      <li><h3 class="font-display text-lg text-brass">Ramah semua usia</h3><p class="text-sm text-ivory/70">Ada pilihan kopi dan non kopi untuk setiap selera.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section id="menu" class="px-5 py-20 max-w-6xl mx-auto">
+  <div class="flex flex-wrap items-end justify-between gap-5 reveal">
+    <h2 class="font-display text-3xl md:text-4xl">Menu kami</h2>
+    <div class="glass rounded-full p-1 flex" role="tablist" aria-label="Kategori menu">
+      <button role="tab" class="tab active" data-cat="kopi" aria-selected="true">Kopi</button>
+      <button role="tab" class="tab" data-cat="nonkopi" aria-selected="false">Non kopi</button>
+    </div>
+  </div>
+  <div id="menuGrid" class="mt-8 grid gap-5 max-w-3xl"></div>
+  <p class="mt-6 text-xs text-ivory/50">Ketuk kartu untuk melihat detail dan memesan.</p>
+</section>
+
+<section id="kontak" class="px-5 py-20 max-w-6xl mx-auto">
+  <div class="glass tilt rounded-[2rem] p-8 md:p-14 grid md:grid-cols-2 gap-10 reveal">
+    <div>
+      <h2 class="font-display text-3xl md:text-4xl">Mampir ke ARTOMORO</h2>
+      <dl class="mt-6 grid gap-4 text-sm">
+        <div><dt class="text-brass font-display">Alamat</dt><dd class="text-ivory/75">Jl. Teuku Umar, Kota Subulussalam</dd></div>
+        <div><dt class="text-brass font-display">Jam buka</dt><dd class="text-ivory/75">Senin–Sabtu, 16.00–00.00</dd></div>
+        <div><dt class="text-brass font-display">Media sosial</dt><dd class="text-ivory/75 flex flex-wrap gap-x-5"><a class="underline" href="https://instagram.com/artomoro_koptea" target="_blank" rel="noopener">Instagram @artomoro_koptea</a><a class="underline" href="https://www.tiktok.com/@mas_hendro77" target="_blank" rel="noopener">TikTok @mas_hendro77</a></dd></div>
+      </dl>
+    </div>
+    <div class="flex flex-col justify-center gap-4">
+      <a id="waMain" class="btn-brass text-center" href="#" target="_blank" rel="noopener">Chat via WhatsApp</a>
+      <a class="btn-glass text-center" href="https://www.google.com/maps/search/?api=1&query=Jl.+Teuku+Umar%2C+Kota+Subulussalam" target="_blank" rel="noopener">Buka di Google Maps</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="px-5 pb-10 text-center text-xs text-ivory/50">
+  <p class="font-display text-base text-ivory/80">ARTOMORO</p>
+  <p>dari kopi turun ke hati · © <span id="yr"></span></p>
+</footer>
+
+<div id="modal" class="fixed inset-0 z-50 hidden items-center justify-center p-5" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div id="mBackdrop" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+  <div class="glass rounded-[2rem] p-8 max-w-md w-full relative modal-card">
+    <button id="mClose" class="absolute top-4 right-5 text-2xl leading-none" aria-label="Tutup">×</button>
+    <img id="mImg" class="w-full h-52 object-cover rounded-2xl mb-5" alt="">
+    <p id="mCat" class="text-sage text-sm"></p>
+    <h3 id="mTitle" class="font-display text-3xl mt-1"></h3>
+    <p id="mDesc" class="mt-3 text-ivory/75 leading-relaxed"></p>
+    <p id="mPrice" class="mt-4 font-display text-xl text-brass"></p>
+    <a id="mWa" class="btn-brass mt-6 inline-block" href="#" target="_blank" rel="noopener">Pesan via WhatsApp</a>
+  </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+html{scroll-behavior:smooth;scroll-padding-top:5.5rem}
+body{background:radial-gradient(120% 80% at 20% 0%,#3D2820 0%,#2B1B15 55%,#1F130F 100%);min-height:100vh;overflow-x:hidden}
+.glass{position:relative;background:rgba(255,240,222,.07);-webkit-backdrop-filter:blur(18px) saturate(140%);backdrop-filter:blur(18px) saturate(140%);border:1px solid rgba(255,235,210,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 24px 60px -28px rgba(0,0,0,.7);overflow:hidden;transition:transform .25s ease}
+.glass::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(380px circle at var(--mx,50%) var(--my,0%),rgba(200,162,94,.16),transparent 60%);opacity:var(--o,0);transition:opacity .3s}
+.glass>*{position:relative}
+.blob{position:fixed;border-radius:50%;filter:blur(70px);opacity:.45;z-index:-1;animation:float 22s ease-in-out infinite}
+.b1{width:340px;height:340px;background:#C8A25E;top:-80px;left:-80px}
+.b2{width:300px;height:300px;background:#7D9484;bottom:10%;right:-90px;animation-delay:-8s}
+.b3{width:260px;height:260px;background:#8A4B35;top:45%;left:30%;animation-delay:-14s;opacity:.3}
+@keyframes float{50%{transform:translate(40px,-50px) scale(1.12)}}
+.nav-link{opacity:.8;transition:opacity .2s,color .2s}.nav-link:hover{opacity:1;color:#C8A25E}
+.btn-brass,.btn-glass{display:inline-block;padding:.8rem 1.6rem;border-radius:999px;font-weight:600;font-size:.9rem;transition:transform .2s,box-shadow .2s,background .2s}
+.btn-brass{background:#C8A25E;color:#2B1B15}.btn-brass:hover{transform:translateY(-2px);box-shadow:0 12px 30px -10px rgba(200,162,94,.7)}
+.btn-glass{background:rgba(255,240,222,.08);border:1px solid rgba(255,235,210,.22)}.btn-glass:hover{background:rgba(255,240,222,.16);transform:translateY(-2px)}
+.tab{padding:.5rem 1.3rem;border-radius:999px;font-size:.9rem;transition:background .25s,color .25s}
+.tab.active{background:#C8A25E;color:#2B1B15}
+.item{cursor:pointer;border-radius:1.5rem;text-align:left}
+.item img{transition:transform .6s cubic-bezier(.2,.8,.2,1)}.item:hover img{transform:scale(1.06)}
+.hero-in{opacity:0;transform:translateY(22px);animation:in .9s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:var(--d,0s)}
+@keyframes in{to{opacity:1;transform:none}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.reveal.on{opacity:1;transform:none}
+.steam{stroke-dasharray:60;animation:steam 3.4s ease-in-out infinite}
+.s2{animation-delay:.5s}.s3{animation-delay:1s}
+@keyframes steam{0%{stroke-dashoffset:60;opacity:0}40%{opacity:1}100%{stroke-dashoffset:-60;opacity:0}}
+.modal-card{animation:pop .35s cubic-bezier(.2,.8,.2,1)}
+@keyframes pop{from{opacity:0;transform:scale(.94) translateY(12px)}}
+#modal.flex{display:flex}
+:focus-visible{outline:2px solid #C8A25E;outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.hero-in,.reveal{opacity:1;transform:none}}
+
+.burger{width:40px;height:40px;position:relative;transition:transform .2s}
+.burger:active{transform:scale(.88)}
+.burger span{position:absolute;left:10px;right:10px;height:2px;border-radius:2px;background:currentColor;transition:transform .4s cubic-bezier(.2,.8,.2,1),top .4s cubic-bezier(.2,.8,.2,1),background .3s}
+.burger span:first-child{top:14px}.burger span:last-child{top:24px}
+.burger[aria-expanded=true]{color:#C8A25E}
+.burger[aria-expanded=true] span:first-child{top:19px;transform:rotate(135deg)}
+.burger[aria-expanded=true] span:last-child{top:19px;transform:rotate(45deg)}
+.drawer{display:grid;grid-template-rows:0fr;margin-top:0;opacity:0;visibility:hidden;transition:grid-template-rows .45s cubic-bezier(.2,.8,.2,1),margin-top .45s,opacity .3s,visibility 0s .45s}
+.drawer.open{grid-template-rows:1fr;margin-top:.5rem;opacity:1;visibility:visible;transition:grid-template-rows .45s cubic-bezier(.2,.8,.2,1),margin-top .45s,opacity .3s,visibility 0s}
+.drawer>.glass{min-height:0}
+.drawer li{opacity:0;transform:translateX(-14px);transition:opacity .3s,transform .4s}
+.drawer.open li{opacity:1;transform:none;transition-delay:calc(var(--i)*80ms + 160ms)}
